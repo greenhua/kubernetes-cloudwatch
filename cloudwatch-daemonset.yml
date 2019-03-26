@@ -14,4 +14,4 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: cloudwatch
-        image: 283824160429.dkr.ecr.us-east-1.amazonaws.com/cloudwatch:latest
+        image: git_repo/cloudwatch:latest
