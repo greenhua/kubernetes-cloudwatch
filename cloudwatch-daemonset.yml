@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: cloudwatch
+  namespace: kube-system
+  labels:
+    k8s-app: cloudwatch
+spec:
+  template:
+    metadata:
+      labels:
+        k8s-app: cloudwatch
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: cloudwatch
+        image: 283824160429.dkr.ecr.us-east-1.amazonaws.com/cloudwatch:latest
